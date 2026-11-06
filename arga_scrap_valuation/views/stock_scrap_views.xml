@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="stock_scrap_form" model="ir.ui.view">
+        <field name="name">stock.scrap.form.valuation</field>
+        <field name="model">stock.scrap</field>
+        <field name="inherit_id" ref="stock.stock_scrap_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button name="action_view_stock_valuation_layers" type="object"
+                        class="oe_stat_button" icon="fa-dollar"
+                        groups="base.group_no_one" invisible="state != 'done'">
+                    <div class="o_stat_info">
+                        <span class="o_stat_text">Valuations</span>
+                    </div>
+                </button>
+            </xpath>
+        </field>
+    </record>
+</odoo>
